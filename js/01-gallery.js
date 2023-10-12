@@ -29,8 +29,8 @@ galleryList.addEventListener("click", (event) => {
       `<img src="${originalImageUrl}" width="800" height="600">`
     );
 
-    instance.element().innerHTML = `<img src="${originalImageUrl}" width="800" height="600">`;
-    console.log(instance);
+    const imgElement = instance.element().querySelector("img");
+    imgElement.src = originalImageUrl;
 
     instance.show();
   }
